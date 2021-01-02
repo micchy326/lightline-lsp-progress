@@ -20,22 +20,12 @@ function! lightline_lsp_progress#progress() abort
   endif
 endfunction
 
-function! s:stop_timer(timer) abort
-  call timer_stop(a:timer)
-  let s:timer = 0
-endfunction
-
 let s:timer = 0
 let s:ignore_time = 0
 function! lightline_lsp_progress#update() abort
-
-  call lsp#log('lightline_lsp_progress#update()')
-
-
   if reltimefloat(reltime()) - s:ignore_time >=
         \ get(g:, 'lightline_lsp_progress_skip_time', 0.3)
         \ || len(s:lsp_progress) == 0
-    call lsp#log('lightline_lsp_progress#update() updated')
     call lightline#update()
     let s:ignore_time = reltimefloat(reltime())
   endif
