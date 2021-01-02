@@ -1,5 +1,3 @@
-g:lightline_lsp_progress_update_period
-
 let s:lsp_progress = []
 function! lightline_lsp_progress#progress() abort
   if exists('*lsp#get_progress')
