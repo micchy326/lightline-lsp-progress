@@ -5,6 +5,8 @@ This plugin enables to show Language Server progress on vim status line.
 https://github.com/itchyny/lightline.vim  
 https://github.com/prabirshrestha/vim-lsp
 
+![](gif/progress_sample.gif)
+
 ## Install
 
 Use your favorite plugin manager.
