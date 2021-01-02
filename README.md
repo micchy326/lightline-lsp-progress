@@ -36,7 +36,7 @@ let g:lightline = {
 
 ## Configuration
 - `g:lightline_lsp_progress_skip_time`  
-Suppresses the frequency of status line updates.
+Suppresses the frequency of status line updates.  
 Prevents heavy operation when using a language server that sends frequent progress notifications.  
 default: 0.3 ms
 
