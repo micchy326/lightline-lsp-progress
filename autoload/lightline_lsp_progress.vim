@@ -7,7 +7,7 @@ function! lightline_lsp_progress#progress() abort
 
     " show only most new progress
     let s:lsp_progress = s:lsp_progress[0]
-    if s:lsp_progress['message'] != '' && s:lsp_progress['percentage'] != 100
+    if s:lsp_progress['message'] != '' && has_key(s:lsp_progress, 'percentage') && s:lsp_progress['percentage'] != 100
       let percent = ''
       if s:lsp_progress['percentage'] >= 0
         let percent = ' ' . string(s:lsp_progress['percentage']) . '%'
