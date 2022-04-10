@@ -15,6 +15,8 @@ function! lightline_lsp_progress#progress() abort
       let s:title = s:lsp_progress['title']
       let message = s:lsp_progress['message'] . percent
       return s:lsp_progress['server'] . ':' . s:title . ' ' . message
+    else
+      return s:lsp_progress['server'] . ':' . s:lsp_progress['title']
     endif
     return ''
   endif
